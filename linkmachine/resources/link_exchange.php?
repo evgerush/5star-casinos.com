@@ -1,0 +1,352 @@
+
+
+
+<HTML>
+<HEAD>
+<TITLE>LinkMachine</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+
+<style>
+.clCMAbs{position:absolute; visibility:hidden; left:0; top:0}
+
+.clLevel0,.clLevel0over{position:absolute; padding:2px; font-family:Verdana,Arial,Sans-serif; font-size:10px; font-weight:bold}
+.clLevel0{background-color:#000000; layer-background-color:#000000; color:#AAAAAA;}
+.clLevel0over{layer-background-color:#336699; background-color:#336699; color:#FCCE55; cursor:pointer; cursor:hand; }
+.clLevel0border{position:absolute; visibility:hidden; background-color:#444444; layer-background-color:#444444}
+
+.clLevel1, .clLevel1over{position:absolute; padding:2px; font-family:Verdana,Arial,Sans-serif; font-size:10px; font-weight:bold}
+.clLevel1{background-color:#CDDBEB; layer-background-color:#CDDBEB; color:#993300;}
+.clLevel1over{layer-background-color:#336699; background-color:#336699; color:#FCCE55; cursor:pointer; cursor:hand; }
+.clLevel1border{position:absolute; visibility:hidden; background-color:#006699; layer-background-color:#006699}
+
+</style>
+<script language="JavaScript1.2" src="coolmenus4.js">
+/*****************************************************************************
+Copyright (c) 2001 Thomas Brattli (webmaster@dhtmlcentral.com)
+DHTML coolMenus - Get it at coolmenus.dhtmlcentral.com
+******************************************************************************/
+</script>
+
+<style>
+
+.largetext {
+   color:#000000;
+   font-size:13pt;
+   font-weight: bold;
+   text-decoration:none;
+   font-family:Verdana, Arial, Sans-serif
+}
+
+.medlighttext {
+   color:#000000;
+   font-size:10pt;
+   font-weight: normal;
+   text-decoration:none;
+   font-family:Verdana, Arial, Sans-serif
+}
+
+.medtext {
+   color:#000000;
+   font-size:10pt;
+   font-weight: bold;
+   text-decoration:none;
+   font-family:Verdana, Arial, Sans-serif
+}
+
+.smalltext {
+   color:#000000;
+   font-size:8pt;
+   font-weight: normal;
+   text-decoration:none;
+   font-family:Verdana, Arial, Sans-serif
+}
+
+A.sitelink {
+   color:#CC4C37;
+   font-size:10pt;
+   font-weight: bold;
+   text-decoration:none;
+   font-family:Verdana, Arial, Sans-serif
+}
+
+A.controllink {
+   color:#993300;
+   font-size:9pt;
+   font-weight: bold;
+   text-decoration:none;
+   font-family:Verdana, Arial, Sans-serif
+}
+
+A.editlink {
+   color:#993300;
+   font-size:8pt;
+   text-decoration:none;
+   font-family:Verdana, Arial, Sans-serif
+}
+
+a:active, a:hover {
+    color: #f30;
+}
+.message {
+    text-align: left;
+    color: #FFDD00;
+    font-size:11pt;
+    font-weight: bold;
+    font-family:Verdana, Arial, Sans-serif
+}
+.messagelink {
+    text-align: left;
+    color: #FFDD00;
+    font-size:11pt;
+    font-weight: bold;
+    font-family:Verdana, Arial, Sans-serif
+}
+.catname {
+    text-align: center;
+    text-decoration: underline;
+    color: #075E8A;
+    font-weight: bold;
+    font-size: 14px;
+    background: #96cde4;
+    padding: 3px;
+}
+.item {
+    text-align: left;
+    background: #f6f6f6;
+    padding: 3px;
+}
+.capcell {
+    text-align: left;
+    font-size:10pt;
+    font-weight: bold;
+    font-family:Verdana, Arial, Sans-serif
+    color: #444;
+    background: #96cde4;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.controlcell {
+    text-align: left;
+    font-size:10pt;
+    font-weight: bold;
+    font-family:Verdana, Arial, Sans-serif
+    color: #444;
+    vertical-align: text-top;
+    background: #96cde4;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.helpcell {
+    text-align: left;
+    font-size:10pt;
+    font-weight: bold;
+    font-family:Verdana, Arial, Sans-serif
+    color: #444;
+    vertical-align: text-top;
+    border: 4px solid #EEEEEE;
+    border-collapse: collapse;
+    background: #96cde4;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.warncell {
+    text-align: left;
+    font-size:10pt;
+    font-weight: bold;
+    font-family:Verdana, Arial, Sans-serif
+    color: #444;
+    vertical-align: text-top;
+    border: 4px solid #EEEEAA;
+    border-collapse: collapse;
+    background: #96cde4;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.normalcell {
+    text-align: left;
+    font-size:9pt;
+    font-weight: normal;
+    font-family:Verdana, Arial, Sans-serif
+    color: #444;
+    background: #96cde4;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 40%;
+}
+.checkcell {
+    text-align: center;
+    vertical-align: text-top;
+    font-weight: bold;
+    color: #444;
+    background: #96cde4;
+    padding-left: 2px;
+    padding-right: 2px;
+    width: 15;
+}
+.blankcell {
+    text-align: center;
+    font-weight: bold;
+    color: #FFFFFF;
+    padding-left: 2px;
+    padding-right: 2px;
+    width: 100%;
+    height: 10;
+}
+.inputcell {
+    text-align: left;
+    font-size:10pt;
+    font-weight: normal;
+    font-family:Verdana, Arial, Sans-serif
+    color: #444;
+    background: #96cde4;
+}
+}
+</style>
+
+</HEAD>
+<BODY BACKGROUND="images/lm_bg_08.jpg" BGCOLOR=#FFFFFF link="#993300" vlink="#993300" alink="#993300" LEFTMARGIN=0 TOPMARGIN=0 MARGINWIDTH=0 MARGINHEIGHT=0>
+
+<script>
+
+//Menu object creation
+oCMenu=new makeCM("oCMenu") //Making the menu object. Argument: menuname
+
+//Menu properties   
+oCMenu.frames = 0
+oCMenu.pxBetween=30
+oCMenu.fromLeft=644 
+oCMenu.fromTop=39   
+oCMenu.rows=1 
+oCMenu.menuPlacement=0
+oCMenu.offlineRoot="" 
+oCMenu.onlineRoot="" 
+oCMenu.resizeCheck=1 
+oCMenu.wait=500 
+oCMenu.fillImg="spacer.gif"
+oCMenu.zIndex=0
+oCMenu.useBar=0
+
+//Level 0 properties
+oCMenu.level[0]=new cm_makeLevel()
+oCMenu.level[0].width=60
+oCMenu.level[0].height=16 
+oCMenu.level[0].regClass="clLevel0"
+oCMenu.level[0].overClass="clLevel0over"
+oCMenu.level[0].borderX=1
+oCMenu.level[0].borderY=1
+oCMenu.level[0].borderClass="clLevel0border"
+oCMenu.level[0].offsetX=0
+oCMenu.level[0].offsetY=0
+oCMenu.level[0].rows=0
+oCMenu.level[0].arrow=0
+oCMenu.level[0].arrowWidth=0
+oCMenu.level[0].arrowHeight=0
+oCMenu.level[0].align="bottomleft"
+
+// Layer 1 properties
+oCMenu.level[1]=new cm_makeLevel()
+oCMenu.level[1].width=110
+oCMenu.level[1].height=20
+oCMenu.level[1].regClass="clLevel1"
+oCMenu.level[1].overClass="clLevel1over"
+oCMenu.level[1].borderX=1
+oCMenu.level[1].borderY=1
+oCMenu.level[1].align="right" 
+oCMenu.level[1].offsetX=-(oCMenu.level[0].width-2)/2+20
+oCMenu.level[1].offsetY=0
+oCMenu.level[1].borderClass="clLevel1border"
+
+oCMenu.makeMenu('top0','','&nbsp;&nbsp;Go To...&nbsp;','','')
+  oCMenu.makeMenu('sub00','top0','Link Manager','linkmachine.php')
+	oCMenu.makeMenu('sub01','top0','SEO Wizard','linkmachine.php?ua=_ua130')
+  oCMenu.makeMenu('sub02','top0','Link Analyzer','linkmachine.php?ua=_ua120')
+  oCMenu.makeMenu('sub03','top0','Rank Tracker','linkmachine.php?ua=_ua150')
+  oCMenu.makeMenu('sub04','top0','Site Manager','linkmachine.php?ua=_ua100')
+  oCMenu.makeMenu('sub05','top0','Settings','linkmachine.php?ua=_ua50')
+  oCMenu.makeMenu('sub06','top0','Upgrade','linkmachine.php?ua=_ua64')
+  oCMenu.makeMenu('sub07','top0','Help','http://linkmachine.net/documentation.htm','_blank')
+  oCMenu.makeMenu('sub08','top0','Log Out','linkmachine.php?ua=logout')
+
+// Construct the menu
+		
+
+</script>
+
+<!-- ImageReady Slices (layout2.psd) -->
+<TABLE WIDTH=780 BORDER=0 CELLPADDING=0 CELLSPACING=0 VALIGN=TOP>
+	<TR  VALIGN=TOP>
+		<TD ROWSPAN=3>
+			<IMG SRC="images/lm_bg_01.jpg" WIDTH=105 HEIGHT=128 ALT=""></TD>
+		<TD width=419 ROWSPAN=2>
+			<IMG SRC="images/lm_bg_02.jpg" WIDTH=419 HEIGHT=57 ALT=""></TD>
+		<TD width=226>
+			<IMG SRC="images/lm_bg_03.jpg" WIDTH=226 HEIGHT=41 ALT=""></TD>
+		<TD width=30 ROWSPAN=2>
+			<IMG SRC="images/lm_bg_04.jpg" WIDTH=30 HEIGHT=57 ALT=""></TD>
+    <TD width="100%" ROWSPAN=4><IMG SRC="spacer.gif" WIDTH=1 HEIGHT=1 ALT=""></TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD width=226>
+			<IMG SRC="images/lm_bg_06.jpg" WIDTH=226 HEIGHT=16 ALT=""></TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD COLSPAN=4>
+      <TABLE WIDTH=675 HEIGHT=100 BORDER=0 CELLPADDING=0 CELLSPACING=0>
+        <TR VALIGN=TOP>
+          <TD VALIGN=TOP ALIGN=LEFT>
+            <br>
+            <span class="message"></span><br>
+            <br>
+            
+<table cellpadding=0 cellspacing=0 width="600">
+  <tr>
+    <td>
+<TR WIDTH=600>
+<TD>
+<p align="left">
+    <table border="0" cellpadding="8" cellspacing="0" width="600">
+      <tr>
+        <td class=inputcell>
+          <span class="medtext">Log In to LinkMachine</span>
+        </td>
+      </tr>
+    </table>
+    <br>
+    <table border="0" cellpadding="8" cellspacing="0" width="600">
+      <tr>
+        <td class=inputcell>
+          <form action="linkmachine.php?ua=_ua34&t=1153496225" method=POST>
+          <br>
+          <span class="medtext">E-mail Address</span><br>
+          <span class="smalltext">Enter the e-mail address used as your account ID.</span><br>
+          <input type="text" name="account_email" value="" size="60" maxlength="100"><br>
+          <br>
+          <span class="medtext">Password</span><br>
+          <span class="smalltext">Enter the password you chose for your account.</span><br>
+          <input type="password" name="account_password" value="" size="60" maxlength="15"><br>
+          <br>
+          <input type="submit" value="Submit" name="submit" style="normal" class="button">
+          </form>
+        </td>
+      </tr>
+    </table> 
+    <br>
+<br>
+  
+          </TD>
+        </TR>
+      </TABLE>
+
+
+    </TD>
+	</TR VALIGN=TOP>
+</TABLE>
+<!-- End ImageReady Slices -->
+</BODY>
+</HTML>
+
+    

@@ -1,0 +1,71 @@
+#alrp-slidebox {
+    background-image: -webkit-linear-gradient(top,#fff,#eee); /* for chrome and safari */
+	background: #fff; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff', endColorstr='#eee'); /* for IE */
+	background: -moz-linear-gradient(top,  #fff,  #eee); /* for firefox 3.6+ */ 
+    bottom: 88px;
+	box-shadow: 1px 0px 3px 1px rgba(0,0,0,0.5); 
+	border: 1px solid rgba(255,255,255,0.5);
+    padding: 10px;
+    position: fixed;
+    right: -380px;
+    width: 350px;
+    z-index: 5;
+}
+#alrp-slidebox .title {
+    color: red;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+#alrp-slidebox .close {
+    background: url("../img/close.gif") no-repeat scroll 0 0 transparent;
+    display: block;
+    float: right;
+    height: 13px;
+    margin: 3px;
+    text-indent: -99999px;
+    width: 13px;
+    cursor: pointer;
+}
+#alrp-slidebox hr {
+    background-color: #E7E7E7;
+    border: 0 none;
+    clear: both;
+    height: 1px;
+    margin-bottom: 5px;
+}
+#alrp-slidebox .list {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    font-size: 12px;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0 10px 5px;
+}
+#alrp-slidebox .list  li {
+    border-bottom: 1px dotted #CCCCCC;
+    padding: 5px 0;
+}
+#alrp-slidebox .list  li .date {
+    color: gray;
+    display: inline-block;
+    font-size: 11px;
+    padding-bottom: 3px;
+}
+#alrp-slidebox .list li h5 {
+    font-size: 13px; margin: 0px;
+}
+#alrp-slidebox .list li h5, #alrp-slidebox .list li h4 {
+    font-family: CartoGothic,arial,Georgia,"Times New Roman",Times,serif;
+    font-weight: normal;
+    padding: 0 0 3px;
+}
+#alrp-slidebox .blue, #alrp-slidebox .blue a {
+    color: #284296;
+    text-decoration: none;
+}
+.clearfix {
+    clear: both;
+}
